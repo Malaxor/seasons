@@ -1,6 +1,7 @@
 import './SeasonDisplay.css';
 import React from 'react';
 
+// helper function
 const getSeason = (lat, month) => {
    // if the month is between April and September
    if(month > 2 && month < 9) {
@@ -22,6 +23,7 @@ const seasonConfig = {
       icon: "snowflake"
    }
 };
+// functional component
 const SeasonDisplay = props => {
    const season = getSeason(props.lat, new Date().getMonth());
    const { text, icon } = seasonConfig[season];

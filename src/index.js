@@ -15,7 +15,7 @@ class App extends Component {
          err => this.setState(() => ({ err: err.message }))
       );
    }
-   render() {
+   renderContent() {
       if(this.state.err && !this.state.lat) {
          return <div>Error: {this.state.err}</div>;
       }   
@@ -23,6 +23,9 @@ class App extends Component {
          return <SeasonDisplay lat={this.state.lat} />;
       }
       return <Loader />;
+   }
+   render() {
+      return this.renderContent();
    }   
 }
 ReactDOM.render(<App />, document.querySelector('#root'));

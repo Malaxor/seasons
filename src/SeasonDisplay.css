@@ -14,6 +14,9 @@
    align-items: center;
    height: 100vh;
 }
+.border-red {
+   border: red;
+}
 .season-display.winter i {
    color: blue;
 }
